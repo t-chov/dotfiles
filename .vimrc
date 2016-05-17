@@ -22,6 +22,10 @@ if dein#load_state(s:dein_dir)
   call dein#add('thinca/vim-quickrun')
   call dein#add('tpope/vim-fugitive')
   call dein#add('scrooloose/nerdtree')
+  call dein#add('scrooloose/nerdcommenter')
+
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('mxw/vim-jsx')
 
   call dein#end()
   call dein#save_state()
@@ -36,6 +40,8 @@ endif
 " =================
 " Common Vim settings
 syntax on
+set nobackup
+set noundofile " for kaoriya vim
 set encoding=utf-8
 set visualbell t_vb= " do not sound
 set number
@@ -102,6 +108,15 @@ call unite#custom#default_action('file', 'tabopen')
 let NERDTreeShowHidden = 1
 nnoremap nt : <C-u>NERDTree<CR>
 " =================
+
+" =================
+" nerdcommenter
+let NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = {
+      \ 'jsx': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' }
+    \ }
+nmap ,, <Plug>NERDCommenterToggle
+vmap ,, <Plug>NERDCommenterToggle
 
 " =================
 " git-fugitive
