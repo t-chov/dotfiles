@@ -17,15 +17,11 @@ endif
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
-  call dein#add('Shougo/neocomplete.vim')
-  call dein#add('Shougo/unite.vim')
-  call dein#add('thinca/vim-quickrun')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('scrooloose/nerdcommenter')
-
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('mxw/vim-jsx')
+  let g:rc_dir    = expand('~/.vim/rc')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
@@ -40,6 +36,7 @@ endif
 " =================
 " Common Vim settings
 syntax on
+colorscheme devbox-dark-256
 set nobackup
 set noundofile " for kaoriya vim
 set encoding=utf-8
@@ -50,8 +47,13 @@ set nowrap
 set showmatch
 set noswapfile
 set cursorline
+set backspace=indent,eol,start
 highlight cusorline term=reverse cterm=reverse
 set laststatus=2 " always shows status
+
+" disable auto comment out
+set formatoptions-=ro
+autocmd FileType * setlocal formatoptions-=ro
 
 " indent size
 set autoindent
@@ -66,14 +68,20 @@ set list
 set listchars=tab:¦-,trail:-,eol:↵,extends:»,precedes:«,nbsp:%
 
 " tab operation
-nnoremap st: <C-u>tabnew<CR>
-nnoremap sT: <C-u>Unite tab<CR>
+nnoremap st :<C-u>tabnew<CR>
+nnoremap sT :<C-u>Unite tab<CR>
 nnoremap sf gt
 nnoremap sb gT
 
 " wrapping
-nnoremap sw: <C-u>set wrap<CR>
-nnoremap sW: <C-u>set nowrap<CR>
+nnoremap sw :<C-u>set wrap<CR>
+nnoremap sW :<C-u>set nowrap<CR>
+
+" split windows
+set splitright
+set splitbelow
+nnoremap sv :<C-u>vs<CR>
+nnoremap ss :<C-u>sp<CR>
 " =================
 
 " =================
@@ -93,8 +101,8 @@ let g:neocomplete#data_directory = $HOME . '/.vim/cache/neocomplete'
 
 " =================
 " unite.vim
-nnoremap su: <C-u>Unite<CR>
-nnoremap suf : <C-u>Unite file<CR>
+nnoremap su  :<C-u>Unite<CR>
+nnoremap suf :<C-u>Unite file<CR>
 " insert mode on
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1

@@ -1,0 +1,16 @@
+[[plugins]]
+repo  = 'pangloss/vim-javascript'
+on_ft = [
+  'javascript',
+  'jsx'
+]
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = [
+  'jsx'
+]
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+on_i = 1
