@@ -37,6 +37,7 @@ endif
 " Common Vim settings
 syntax on
 colorscheme devbox-dark-256
+filetype plugin indent on
 set nobackup
 set noundofile " for kaoriya vim
 set encoding=utf-8
@@ -62,6 +63,11 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd BufNewFile,BufRead *.php setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END
 
 " listing
 set list
@@ -132,3 +138,10 @@ nnoremap <silent> <Space>gb :Gblame<CR>
 nnoremap <silent> <Space>gd :Gdiff<CR>
 nnoremap <silent> <Space>gs :Gstatus<CR>
 " =================
+
+" =================
+" vimshell
+nnoremap vs :<C-u>VimShell<CR>
+nnoremap vp :<C-u>VimShellPop<CR>
+" =================
+

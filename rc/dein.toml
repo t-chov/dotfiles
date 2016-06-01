@@ -31,3 +31,6 @@ repo = 'scrooloose/nerdcommenter'
 [[plugins]]
 repo = 'flazz/vim-colorschemes'
 
+[[plugins]]
+repo = 'Shougo/vimshell'
+

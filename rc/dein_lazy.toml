@@ -12,5 +12,11 @@ on_ft = [
 ]
 
 [[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = [
+  'toml'
+]
+
+[[plugins]]
 repo = 'Shougo/neocomplete.vim'
 on_i = 1
