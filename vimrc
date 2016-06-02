@@ -145,3 +145,12 @@ nnoremap vs :<C-u>VimShell<CR>
 nnoremap vp :<C-u>VimShellPop<CR>
 " =================
 
+" =================
+" neosnippet
+" C-kでスニペットを展開
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+" 自分のスニペットを ~/.vim/snip/ に追加
+let s:my_snip = '~/.vim/snip/'
+let g:neosnippet#snippets_directory = s:my_snip
+" =================

@@ -17,6 +17,9 @@ hook_post_update = '''
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
+repo = 'Shougo/unite-outline'
+
+[[plugins]]
 repo = 'thinca/vim-quickrun'
 
 [[plugins]]
@@ -34,3 +37,11 @@ repo = 'flazz/vim-colorschemes'
 [[plugins]]
 repo = 'Shougo/vimshell'
 
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'

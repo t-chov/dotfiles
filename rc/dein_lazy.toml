@@ -18,5 +18,7 @@ on_ft = [
 ]
 
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
-on_i = 1
+repo = 'violetyk/neocomplete-php.vim'
+on_ft = [
+  'php'
+]
