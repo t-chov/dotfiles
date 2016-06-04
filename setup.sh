@@ -10,6 +10,7 @@ fi
 
 ln -s ${script_dir}/rc     ${HOME}/.vim
 ln -s ${script_dir}/syntax ${HOME}/.vim
+ln -s ${script_dir}/dict   ${HOME}/.vim
 ln -s ${script_dir}/vimrc  ${HOME}/.vimrc
 ln -s ${script_dir}/zshrc  ${HOME}/.zshrc
 ln -s ${script_dir}/zshenv ${HOME}/.zshenv

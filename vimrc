@@ -103,6 +103,11 @@ let g:neocomplete#enable_auto_close_preview = 0
 "AutoCmd InsertLeave * silent! pclose!
 let g:neocomplete#max_keyword_width = 10000
 let g:neocomplete#data_directory = $HOME . '/.vim/cache/neocomplete'
+" 辞書の設定
+let g:neocomplcache_dictionary_filetype_lists = {
+    \ 'default' : '',
+    \ 'php' : $HOME.'/.vim/dict/php.dict',
+    \ }
 " =================
 
 " =================
@@ -154,3 +159,4 @@ smap <C-k> <Plug>(neosnippet_expand_or_jump)
 let s:my_snip = '~/.vim/snip/'
 let g:neosnippet#snippets_directory = s:my_snip
 " =================
+
