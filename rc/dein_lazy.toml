@@ -22,3 +22,9 @@ repo = 'violetyk/neocomplete-php.vim'
 on_ft = [
   'php'
 ]
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = [
+  'go', 'golang'
+]
