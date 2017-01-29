@@ -22,3 +22,9 @@ repo = 'violetyk/neocomplete-php.vim'
 on_ft = [
   'php'
 ]
+
+[[plugins]]
+repo = 'derekwyatt/vim-scala'
+on_ft = [
+  'scala'
+]

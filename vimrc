@@ -69,6 +69,8 @@ augroup fileTypeIndent
   autocmd BufNewFile,BufRead *.php setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
+autocmd BufNewFile,BufRead *.scala setf scala
+
 " listing
 set list
 set listchars=tab:¦-,trail:-,eol:↵,extends:»,precedes:«,nbsp:%
@@ -88,10 +90,18 @@ set splitright
 set splitbelow
 nnoremap sv :<C-u>vs<CR>
 nnoremap ss :<C-u>sp<CR>
+
+" omni completion
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " =================
 
 " =================
 " neocomplete.vim
+let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#enable_underbar_completion = 1
@@ -104,10 +114,14 @@ let g:neocomplete#enable_auto_close_preview = 0
 let g:neocomplete#max_keyword_width = 10000
 let g:neocomplete#data_directory = $HOME . '/.vim/cache/neocomplete'
 " 辞書の設定
-let g:neocomplcache_dictionary_filetype_lists = {
+let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'php' : $HOME.'/.vim/dict/php.dict',
+    \ 'vimshell' : $HOME.'/.vimshell_hist'
     \ }
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
 " =================
 
 " =================
