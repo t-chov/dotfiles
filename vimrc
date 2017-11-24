@@ -36,7 +36,7 @@ endif
 " =================
 " Common Vim settings
 syntax on
-colorscheme devbox-dark-256
+colorscheme atom
 filetype plugin indent on
 set nobackup
 set noundofile " for kaoriya vim
@@ -48,6 +48,7 @@ set nowrap
 set showmatch
 set noswapfile
 set cursorline
+set hlsearch
 set backspace=indent,eol,start
 highlight cusorline term=reverse cterm=reverse
 set laststatus=2 " always shows status
@@ -71,6 +72,7 @@ augroup fileTypeIndent
 augroup END
 
 autocmd BufNewFile,BufRead *.scala setf scala
+autocmd BufNewFile,BufRead *.pug,*.jade setf pug
 
 " listing
 set list

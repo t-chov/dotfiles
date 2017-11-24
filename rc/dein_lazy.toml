@@ -34,3 +34,9 @@ repo = 'fatih/vim-go'
 on_ft = [
   'go', 'golang'
 ]
+
+[[plugins]]
+repo = 'digitaltoad/vim-pug.git'
+on_ft = [
+  'pug', 'jade'
+]
