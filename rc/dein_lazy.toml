@@ -34,3 +34,9 @@ repo = 'fatih/vim-go'
 on_ft = [
   'go', 'golang'
 ]
+
+[[plugins]]
+repo = 'lumiliet/vim-twig'
+on_ft = [
+  'twig'
+]

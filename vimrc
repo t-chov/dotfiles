@@ -71,6 +71,7 @@ augroup fileTypeIndent
 augroup END
 
 autocmd BufNewFile,BufRead *.scala setf scala
+autocmd BufNewFile,BufRead *.twig setf twig
 
 " listing
 set list
