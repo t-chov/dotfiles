@@ -32,6 +32,9 @@ repo = 'scrooloose/nerdtree'
 repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
+repo = 'vim-syntastic/syntastic'
+
+[[plugins]]
 repo = 'flazz/vim-colorschemes'
 
 [[plugins]]

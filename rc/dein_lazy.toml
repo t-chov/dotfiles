@@ -46,3 +46,9 @@ repo = 'digitaltoad/vim-pug'
 on_ft = [
   'pug'
 ]
+
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+on_ft = [
+  'yaml'
+]
