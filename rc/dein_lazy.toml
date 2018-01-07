@@ -36,7 +36,7 @@ on_ft = [
 ]
 
 [[plugins]]
-repo = 'digitaltoad/vim-pug.git'
+repo = 'digitaltoad/vim-pug'
 on_ft = [
   'pug', 'jade'
 ]
@@ -45,4 +45,15 @@ on_ft = [
 repo = 'posva/vim-vue'
 on_ft = [
   'vue'
+]
+
+repo = 'lumiliet/vim-twig'
+on_ft = [
+  'twig'
+]
+
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+on_ft = [
+  'yaml'
 ]

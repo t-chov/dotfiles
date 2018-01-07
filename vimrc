@@ -74,6 +74,7 @@ augroup END
 autocmd BufNewFile,BufRead *.scala setf scala
 autocmd BufNewFile,BufRead *.pug,*.jade setf pug
 autocmd BufNewFile,BufRead *.vue setf vue
+autocmd BufNewFile,BufRead *.twig setf twig
 
 " listing
 set list
@@ -178,3 +179,14 @@ let s:my_snip = '~/.vim/snip/'
 let g:neosnippet#snippets_directory = s:my_snip
 " =================
 
+
+" Syntastic
+set statusline+=%F
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

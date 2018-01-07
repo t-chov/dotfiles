@@ -32,6 +32,9 @@ repo = 'scrooloose/nerdtree'
 repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
+repo = 'vim-syntastic/syntastic'
+
+[[plugins]]
 repo = 'flazz/vim-colorschemes'
 
 [[plugins]]
@@ -45,3 +48,6 @@ repo = 'Shougo/neosnippet.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'guileen/vim-node-dict'
