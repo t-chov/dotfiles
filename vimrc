@@ -73,6 +73,7 @@ augroup END
 
 autocmd BufNewFile,BufRead *.scala setf scala
 autocmd BufNewFile,BufRead *.pug,*.jade setf pug
+autocmd BufNewFile,BufRead *.vue setf vue
 
 " listing
 set list

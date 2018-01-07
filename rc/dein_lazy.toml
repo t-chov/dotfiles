@@ -40,3 +40,9 @@ repo = 'digitaltoad/vim-pug.git'
 on_ft = [
   'pug', 'jade'
 ]
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = [
+  'vue'
+]
