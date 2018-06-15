@@ -52,6 +52,7 @@ set hlsearch
 set backspace=indent,eol,start
 highlight cusorline term=reverse cterm=reverse
 set laststatus=2 " always shows status
+set rtp+=/usr/local/opt/fzf " for fzf
 
 " disable auto comment out
 set formatoptions-=ro
@@ -179,20 +180,19 @@ let s:my_snip = '~/.vim/snip/'
 let g:neosnippet#snippets_directory = s:my_snip
 " =================
 
-
-" Syntastic
-set statusline+=%F
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pylint']
-
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '>'
+
+" ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" neoformat
+autocmd BufWritePre *.js Neoformat
+
+" ALEの入力中シンタックスチェックをやめる
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0

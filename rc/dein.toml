@@ -32,7 +32,7 @@ repo = 'scrooloose/nerdtree'
 repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
-repo = 'vim-syntastic/syntastic'
+repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'flazz/vim-colorschemes'
@@ -57,3 +57,15 @@ repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+
+[[plugins]]
+repo = 'mileszs/ack.vim'
+
+[[plugins]]
+repo = 'sbdchd/neoformat'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
