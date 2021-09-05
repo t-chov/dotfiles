@@ -2,16 +2,17 @@
 
 Files for my developing environment.
 
-* .vimrc
-=======
-# how to use fish
+## requirements
 
-1. `brew install fish`
-2. `sudo -e /etc/shells`
-3. `chsh -s /usr/local/bin/fish`
-4. fishermanのインストール: https://github.com/fisherman/fisherman
-  - `curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher`
-5. bobthefishのインストール
-  - `fisher fzf omf/theme-bobthefish`
-  - PowerLineも入れておく
-    - https://github.com/powerline/fonts
+- zsh
+- prezto
+- ghq
+- peco
+- powerlebvel10k
+
+## usage
+
+1. exec `setup.zsh`
+2. `echo "zstyle :prezto:module:prompt theme powerlevel10k" >> ~/.zpreztorc`
+3. `p10k configure`
+4. append some options from `zprofile` to `~/.zprofile`
