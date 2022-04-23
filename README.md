@@ -3,15 +3,41 @@
 Files for my developing environment.
 
 * .vimrc
-=======
-# how to use fish
 
-1. `brew install fish`
-2. `sudo -e /etc/shells`
-3. `chsh -s /usr/local/bin/fish`
-4. fishermanのインストール: https://github.com/fisherman/fisherman
-  - `curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher`
-5. bobthefishのインストール
-  - `fisher fzf omf/theme-bobthefish`
-  - PowerLineも入れておく
-    - https://github.com/powerline/fonts
+-----
+
+# Installation
+
+- [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4)
+
+## install zsh
+
+```sh
+# windows
+sudo apt install zsh
+```
+
+## install [prezto](https://github.com/sorin-ionescu/prezto)
+
+```sh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+zsh
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+```
+
+## install powerline fonts
+
+- [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4#powerline-on-zsh-on-ubuntu-on-wsl2-on-windows-10)
+
+## use agnoster
+
+```sh
+cat << EOF
+autoload -Uz promptinit
+promptinit
+prompt agnoster
+EOF >> ~/.zshrc
+```
