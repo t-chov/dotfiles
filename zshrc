@@ -30,4 +30,7 @@ function peco-src() {
 }
 zle -N peco-src
 
+# fnm
+eval "$(fnm env --use-on-cd)"
+
 eval "$(starship init zsh)"

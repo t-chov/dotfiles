@@ -9,6 +9,7 @@ Files for my developing environment.
 - ghq
 - peco
 - starship
+- fnm
 
 ## usage
 
@@ -34,6 +35,14 @@ zsh
 ## install powerline fonts
 
 - [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4#powerline-on-zsh-on-ubuntu-on-wsl2-on-windows-10)
+
+## install fnm
+
+```sh
+curl -fsSL https://fnm.vercel.app/install | bash
+```
+
+インストール後、`fnm install <version>` で Node.js をインストールする。
 
 ## install Go
 

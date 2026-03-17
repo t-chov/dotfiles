@@ -23,12 +23,12 @@ sheldon lock   # download all plugins
 
 ## Requirements
 
-- zsh, sheldon, ghq, peco, starship, pyenv
+- zsh, sheldon, ghq, peco, starship, pyenv, fnm
 
 ## File Structure
 
 | File/Dir | Purpose |
-|---|---|
+| --- | --- |
 | `setup.zsh` | Bootstrap script — symlinks all configs |
 | `zprofile` | Login shell — env vars (BROWSER, EDITOR, PAGER, LANG, LESS), PATH, pyenv init |
 | `zshrc` | Interactive shell — zsh options, sheldon plugin loading, peco-src keybind (`Ctrl+]`), compinit |
@@ -44,7 +44,7 @@ sheldon lock   # download all plugins
 
 **zprofile/zshrc split**: Login-shell env vars live in `zprofile`; interactive config (options, plugins, keybinds) lives in `zshrc`.
 
-**zshrc**: `Ctrl+]` triggers `peco-src` — fuzzy-finds ghq-managed repos and `cd`s into them. Sheldon loads plugins (completions, autosuggestions, syntax-highlighting), then `compinit` runs. Starship prompt is initialized via `eval "$(starship init zsh)"` at the end.
+**zshrc**: `Ctrl+]` triggers `peco-src` — fuzzy-finds ghq-managed repos and `cd`s into them. Sheldon loads plugins (completions, autosuggestions, syntax-highlighting), then `compinit` runs. fnm is initialized via `eval "$(fnm env --use-on-cd)"` — automatically switches Node.js version when entering a directory with `.node-version` or `.nvmrc`. Starship prompt is initialized via `eval "$(starship init zsh)"` at the end.
 
 **vimrc**: Uses dein.vim (plugins in `~/.vim/plugins/`). Key plugins: neocomplete, neosnippet, NERDTree (`nt`), unite.vim, ALE (lint on save only), vim-fugitive, neoformat (auto-formats JS on save).
 
