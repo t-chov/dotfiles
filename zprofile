@@ -67,5 +67,6 @@ path=(
   /usr/local/go/bin
   $HOME/go/bin
   $HOME/.local/bin
+  $HOME/.local/share/fnm
   $path
 )

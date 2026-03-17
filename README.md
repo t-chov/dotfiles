@@ -33,6 +33,14 @@ zsh
 ./setup.zsh
 ```
 
+## change default shell (Linux)
+
+```sh
+chsh -s $(which zsh)
+```
+
+ログアウト後に再ログインすると反映される。
+
 ## install powerline fonts
 
 - [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4#powerline-on-zsh-on-ubuntu-on-wsl2-on-windows-10)
