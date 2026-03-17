@@ -18,10 +18,10 @@ fi
 #
 
 if [[ -z "$EDITOR" ]]; then
-  export EDITOR='nano'
+  export EDITOR='vim'
 fi
 if [[ -z "$VISUAL" ]]; then
-  export VISUAL='nano'
+  export VISUAL='vim'
 fi
 if [[ -z "$PAGER" ]]; then
   export PAGER='less'
@@ -66,6 +66,7 @@ path=(
   $HOME/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  /usr/local/go/bin
   $PYENV_ROOT/bin
   $path
 )

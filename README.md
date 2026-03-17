@@ -17,7 +17,7 @@ Files for my developing environment.
 
 -----
 
-# Installation
+## Installation
 
 - [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4)
 
@@ -34,3 +34,13 @@ zsh
 ## install powerline fonts
 
 - [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4#powerline-on-zsh-on-ubuntu-on-wsl2-on-windows-10)
+
+## install Go
+
+Download the tarball from <https://go.dev/dl/> and extract to `/usr/local`:
+
+```sh
+sudo tar -C /usr/local -xzf go<version>.linux-amd64.tar.gz
+```
+
+`/usr/local/go/bin` is already added to `PATH` via `zprofile`.
