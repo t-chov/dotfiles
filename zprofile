@@ -65,6 +65,7 @@ path=(
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   /usr/local/go/bin
+  $HOME/go/bin
   $HOME/.local/bin
   $path
 )
