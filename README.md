@@ -5,18 +5,16 @@ Files for my developing environment.
 ## requirements
 
 - zsh
-- prezto
+- sheldon
 - ghq
 - peco
-- powerlebvel10k
+- powerlevel10k
 
 ## usage
 
-1. exec `setup.zsh`
-2. `echo "zstyle :prezto:module:prompt theme powerlevel10k" >> ~/.zpreztorc`
+1. exec `./setup.zsh`
+2. `sheldon lock` (downloads all plugins)
 3. `p10k configure`
-4. append some options from `zprofile` to `~/.zprofile`
-* .vimrc
 
 -----
 
