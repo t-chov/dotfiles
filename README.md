@@ -5,22 +5,21 @@ Files for my developing environment.
 ## requirements
 
 - zsh
-- prezto
+- sheldon
 - ghq
 - peco
-- powerlebvel10k
+- starship
+- fnm
+- uv
 
 ## usage
 
-1. exec `setup.zsh`
-2. `echo "zstyle :prezto:module:prompt theme powerlevel10k" >> ~/.zpreztorc`
-3. `p10k configure`
-4. append some options from `zprofile` to `~/.zprofile`
-* .vimrc
+1. exec `./setup.zsh`
+2. `sheldon lock` (downloads all plugins)
 
 -----
 
-# Installation
+## Installation
 
 - [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4)
 
@@ -34,6 +33,65 @@ zsh
 ./setup.zsh
 ```
 
+## change default shell (Linux)
+
+```sh
+chsh -s $(which zsh)
+```
+
+ログアウト後に再ログインすると反映される。
+
 ## install powerline fonts
 
 - [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4#powerline-on-zsh-on-ubuntu-on-wsl2-on-windows-10)
+
+## install sheldon
+
+```sh
+curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/tool.sh \
+  | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
+```
+
+## install ghq
+
+```sh
+go install github.com/x-motemen/ghq@latest
+```
+
+## install peco
+
+```sh
+go install github.com/peco/peco/cmd/peco@latest
+```
+
+## install starship
+
+```sh
+curl -sS https://starship.rs/install.sh | sh
+```
+
+## install fnm
+
+```sh
+curl -fsSL https://fnm.vercel.app/install | bash
+```
+
+インストール後、`fnm install <version>` で Node.js をインストールする。
+
+## install Go
+
+Download the tarball from <https://go.dev/dl/> and extract to `/usr/local`:
+
+```sh
+sudo tar -C /usr/local -xzf go<version>.linux-amd64.tar.gz
+```
+
+`/usr/local/go/bin` is already added to `PATH` via `zprofile`.
+
+## install uv
+
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+インストール後、`uv python install <version>` で Python をインストールする。

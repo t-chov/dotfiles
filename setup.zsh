@@ -12,13 +12,13 @@ then
   ln -s ${script_dir}/vimrc  ${HOME}/.vimrc
 fi
 
-if [ ! -d "${HOME}/.zprezto" ]
-then
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-  setopt EXTENDED_GLOB
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done
-fi
+# sheldon config
+mkdir -p "${HOME}/.config/sheldon"
+[ ! -f "${HOME}/.config/sheldon/plugins.toml" ] && \
+  ln -s "${script_dir}/sheldon/plugins.toml" "${HOME}/.config/sheldon/plugins.toml"
 
-ln -s ${script_dir}/tmux.conf ${HOME}/.tmux.conf
+# zsh config
+[ ! -f "${HOME}/.zprofile" ] && ln -s "${script_dir}/zprofile" "${HOME}/.zprofile"
+[ ! -f "${HOME}/.zshrc" ]    && ln -s "${script_dir}/zshrc"    "${HOME}/.zshrc"
+
+[ ! -f "${HOME}/.tmux.conf" ] && ln -s "${script_dir}/tmux.conf" "${HOME}/.tmux.conf"
