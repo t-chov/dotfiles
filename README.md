@@ -8,13 +8,12 @@ Files for my developing environment.
 - sheldon
 - ghq
 - peco
-- powerlevel10k
+- starship
 
 ## usage
 
 1. exec `./setup.zsh`
 2. `sheldon lock` (downloads all plugins)
-3. `p10k configure`
 
 -----
 

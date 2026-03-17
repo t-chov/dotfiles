@@ -10,8 +10,7 @@ setopt hist_ignore_space
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
-# Load plugins via sheldon (includes powerlevel10k, zsh-completions,
-# zsh-autosuggestions, zsh-syntax-highlighting)
+# Load plugins via sheldon (zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting)
 eval "$(sheldon source)"
 
 # Enable completion (after sheldon so zsh-completions fpath additions are picked up)
@@ -31,4 +30,4 @@ function peco-src() {
 }
 zle -N peco-src
 
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+eval "$(starship init zsh)"
