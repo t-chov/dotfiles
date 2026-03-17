@@ -23,3 +23,7 @@ mkdir -p "${HOME}/.config/sheldon"
 [ ! -f "${HOME}/.zshrc" ]    && ln -s "${script_dir}/zshrc"    "${HOME}/.zshrc"
 
 [ ! -f "${HOME}/.tmux.conf" ] && ln -s "${script_dir}/tmux.conf" "${HOME}/.tmux.conf"
+
+# Create local secret files if they don't exist
+[[ -f ~/.zprofile.local ]] || touch ~/.zprofile.local
+[[ -f ~/.zshrc.local ]] || touch ~/.zshrc.local

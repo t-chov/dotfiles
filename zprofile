@@ -52,3 +52,6 @@ if [[ -z "$LESSOPEN" ]] && (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 # ref: http://qiita.com/uasi/items/c4288dd835a65eb9d709
+
+# Machine-local overrides and secrets (not tracked in git)
+[[ -f ~/.zprofile.local ]] && source ~/.zprofile.local

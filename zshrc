@@ -34,3 +34,6 @@ zle -N peco-src
 eval "$(fnm env --use-on-cd)"
 
 eval "$(starship init zsh)"
+
+# Machine-local overrides and secrets (not tracked in git)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local

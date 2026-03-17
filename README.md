@@ -95,3 +95,20 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 インストール後、`uv python install <version>` で Python をインストールする。
+
+## machine-local / secret env vars
+
+`~/.zprofile.local` と `~/.zshrc.local` にマシン固有の設定やシークレットを書く。
+これらのファイルは `setup.zsh` 実行時に自動で作成され、git には含まれない。
+
+| ファイル | 用途 |
+| --- | --- |
+| `~/.zprofile.local` | ログインシェル用（API キー、PATH 追加など） |
+| `~/.zshrc.local` | インタラクティブシェル用（エイリアス、関数など） |
+
+```zsh
+# ~/.zprofile.local の例
+export GITHUB_TOKEN="ghp_xxxx"
+export AWS_ACCESS_KEY_ID="AKIA..."
+export AWS_SECRET_ACCESS_KEY="..."
+```
