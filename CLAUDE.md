@@ -23,14 +23,14 @@ sheldon lock   # download all plugins
 
 ## Requirements
 
-- zsh, sheldon, ghq, peco, starship, pyenv, fnm
+- zsh, sheldon, ghq, peco, starship, fnm, uv
 
 ## File Structure
 
 | File/Dir | Purpose |
 | --- | --- |
 | `setup.zsh` | Bootstrap script — symlinks all configs |
-| `zprofile` | Login shell — env vars (BROWSER, EDITOR, PAGER, LANG, LESS), PATH, pyenv init |
+| `zprofile` | Login shell — env vars (BROWSER, EDITOR, PAGER, LANG, LESS), PATH (includes `$HOME/.local/bin` for uv) |
 | `zshrc` | Interactive shell — zsh options, sheldon plugin loading, peco-src keybind (`Ctrl+]`), compinit |
 | `sheldon/plugins.toml` | Sheldon plugin manifest — zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting |
 | `vimrc` | Vim config using dein.vim plugin manager |

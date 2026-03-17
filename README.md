@@ -10,6 +10,7 @@ Files for my developing environment.
 - peco
 - starship
 - fnm
+- uv
 
 ## usage
 
@@ -36,6 +37,31 @@ zsh
 
 - [windows](https://qiita.com/mtsgi/items/8a844870f30b30ef21e4#powerline-on-zsh-on-ubuntu-on-wsl2-on-windows-10)
 
+## install sheldon
+
+```sh
+curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/tool.sh \
+  | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
+```
+
+## install ghq
+
+```sh
+go install github.com/x-motemen/ghq@latest
+```
+
+## install peco
+
+```sh
+go install github.com/peco/peco/cmd/peco@latest
+```
+
+## install starship
+
+```sh
+curl -sS https://starship.rs/install.sh | sh
+```
+
 ## install fnm
 
 ```sh
@@ -53,3 +79,11 @@ sudo tar -C /usr/local -xzf go<version>.linux-amd64.tar.gz
 ```
 
 `/usr/local/go/bin` is already added to `PATH` via `zprofile`.
+
+## install uv
+
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+インストール後、`uv python install <version>` で Python をインストールする。

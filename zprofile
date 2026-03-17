@@ -60,16 +60,11 @@ if [[ -z "$LESSOPEN" ]] && (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 # ref: http://qiita.com/uasi/items/c4288dd835a65eb9d709
 
-export PYENV_ROOT="$HOME/.pyenv"
-
 path=(
   $HOME/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   /usr/local/go/bin
-  $PYENV_ROOT/bin
+  $HOME/.local/bin
   $path
 )
-
-# pyenv
-eval "$(pyenv init -)"
