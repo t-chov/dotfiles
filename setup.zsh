@@ -18,6 +18,7 @@ mkdir -p "${HOME}/.config/sheldon"
   ln -s "${script_dir}/sheldon/plugins.toml" "${HOME}/.config/sheldon/plugins.toml"
 
 # zsh config
+[ ! -f "${HOME}/.zshenv" ]   && ln -s "${script_dir}/zshenv"   "${HOME}/.zshenv"
 [ ! -f "${HOME}/.zprofile" ] && ln -s "${script_dir}/zprofile" "${HOME}/.zprofile"
 [ ! -f "${HOME}/.zshrc" ]    && ln -s "${script_dir}/zshrc"    "${HOME}/.zshrc"
 

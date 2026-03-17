@@ -36,13 +36,6 @@ if [[ -z "$LANG" ]]; then
 fi
 
 #
-# Paths
-#
-
-# Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
-
-#
 # Less
 #
 
@@ -59,14 +52,3 @@ if [[ -z "$LESSOPEN" ]] && (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 # ref: http://qiita.com/uasi/items/c4288dd835a65eb9d709
-
-path=(
-  $HOME/{,s}bin(N)
-  /opt/{homebrew,local}/{,s}bin(N)
-  /usr/local/{,s}bin(N)
-  /usr/local/go/bin
-  $HOME/go/bin
-  $HOME/.local/bin
-  $HOME/.local/share/fnm
-  $path
-)
