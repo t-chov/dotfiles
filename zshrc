@@ -10,6 +10,9 @@ setopt hist_ignore_space
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
+# Color aliases
+alias ls='ls --color=auto'
+
 # Load plugins via sheldon (zsh-completions, zsh-autosuggestions, zsh-syntax-highlighting)
 eval "$(sheldon source)"
 
