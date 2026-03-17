@@ -38,6 +38,10 @@ eval "$(fnm env --use-on-cd)"
 
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
+bindkey '^P' up-line-or-history
+bindkey '^N' down-line-or-history
+bindkey '^K' kill-line
+bindkey '^Y' yank
 
 eval "$(starship init zsh)"
 
