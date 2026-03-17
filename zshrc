@@ -36,6 +36,9 @@ zle -N peco-src
 # fnm
 eval "$(fnm env --use-on-cd)"
 
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+
 eval "$(starship init zsh)"
 
 # Machine-local overrides and secrets (not tracked in git)
